@@ -1,0 +1,21 @@
+{
+   "id":"1",
+   "query":{
+      "sql":"select ST_Point(pickup_longitude, pickup_latitude) AS point, passenger_count AS w FROM global_temp.nyc_taxi WHERE ST_Within(ST_Point(pickup_longitude, pickup_latitude), 'POLYGON ((-73.998427 40.730309, -73.954348 40.730309, -73.954348 40.780816 ,-73.998427 40.780816, -73.998427 40.730309))')",
+      "type":"heat",
+      "params":{
+         "width":1024,
+         "height":896,
+         "heat":{
+            "bounding_box":[
+               -73.998427,
+               40.730309,
+               -73.954348,
+               40.780816
+            ],
+            "coordinate":"EPSG:4326",
+            "map_scale":10
+         }
+      }
+   }
+}

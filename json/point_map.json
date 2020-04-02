@@ -1,0 +1,23 @@
+{
+   "id":"1",
+   "query":{
+      "sql":"SELECT ST_Point (pickup_longitude, pickup_latitude) AS point FROM global_temp.nyc_taxi WHERE (ST_Within (ST_Point (pickup_longitude, pickup_latitude), 'POLYGON ((-74.06555330047668 40.66855021578871, -74.06555330047668 40.85271134803699, -73.6723478323298 40.85271134803699, -73.6723478323298 40.66855021578871, -74.06555330047668 40.66855021578871))')) LIMIT 1000000",
+      "type":"point",
+      "params":{
+         "width":1821,
+         "height":1132,
+         "point":{
+            "bounding_box":[
+               -74.06555330047668,
+               40.66855021578871,
+               -73.6723478323298,
+               40.85271134803699
+            ],
+            "coordinate":"EPSG:4326",
+            "stroke_width":3,
+            "stroke":"#37A2DA",
+            "opacity":0.5
+         }
+      }
+   }
+}

@@ -1,0 +1,18 @@
+{
+    "id": "1",
+    "query": {
+        "sql": "select buildingtext_dropoff as wkt, AVG(passenger_count) as w from global_temp.nyc_taxi where (buildingtext_dropoff != '' AND ST_Within(buildingtext_dropoff,'POLYGON ((-73.998427 40.730309, -73.954348 40.730309, -73.954348 40.780816 ,-73.998427 40.780816, -73.998427 40.730309))')) GROUP BY wkt",
+        "type": "choropleth",
+        "params": {
+            "width": 1024,
+            "height": 896,
+            "choropleth": {
+                "bounding_box": [-73.984092, 40.753893, -73.977588, 40.756342],
+                "coordinate": "EPSG:4326",
+                "color_style": "blue_to_red",
+                "rule": [2.5, 5],
+                "opacity": 1
+            }
+        }
+    }
+}

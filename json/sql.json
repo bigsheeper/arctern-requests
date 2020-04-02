@@ -1,0 +1,7 @@
+{
+    "id": "1",
+    "query": {
+        "sql": "select * from global_temp.nyc_taxi where ST_Distance (ST_Transform (ST_Point (dropoff_longitude, dropoff_latitude), 'epsg:4326', 'epsg:3857'), ST_Transform( 'point(-73.95188623976539 40.811208722635484)', 'epsg:4326', 'epsg:3857')) < 363.71614278112816 limit 1",
+        "type": "sql"
+    }
+}
