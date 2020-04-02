@@ -1,5 +1,6 @@
 import requests
 import json
+import time
 
 def save_png(hex_str, file_name):
     import base64
@@ -10,7 +11,10 @@ def save_png(hex_str, file_name):
 def post_request(name, url, save):
     with open('json/' + name + '.json') as f:
         data = json.load(f)
+
+    start_time = time.time()
     r = requests.post(url=url, json=data)
+    print("--- %s seconds ---" % (time.time() - start_time))
 
     if save:
         hex_str = r.json()['data']['result']
@@ -25,11 +29,8 @@ def run_simple_test(url):
     post_request('sql', url, False)
 
 def run_pressure_test(url):
-    import time
-    for i in range(12 * 60):
-        start_time = time.time()
+    for i in range(24 * 60):
         post_request('point_map', url, False)
-        print("--- %s seconds ---" % (time.time() - start_time))
         time.sleep(60)
 
 if __name__ == "__main__":
