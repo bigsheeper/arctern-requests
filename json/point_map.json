@@ -13,9 +13,9 @@
                -73.6723478323298,
                40.85271134803699
             ],
-            "coordinate":"EPSG:4326",
-            "stroke_width":3,
-            "stroke":"#37A2DA",
+            "coordinate_system":"EPSG:4326",
+            "point_size":3,
+            "point_color":"#37A2DA",
             "opacity":0.5
          }
       }

@@ -13,8 +13,9 @@
                -73.954348,
                40.780816
             ],
-            "coordinate":"EPSG:4326",
-            "map_scale":10
+            "coordinate_system":"EPSG:4326",
+            "map_zoom_level":10,
+            "aggregation_type": "sum"
          }
       }
    }

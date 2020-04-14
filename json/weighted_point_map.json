@@ -1,0 +1,24 @@
+{
+  "id": "1",
+  "query": {
+    "sql": "SELECT ST_Point (dropoff_longitude, dropoff_latitude) AS point, fare_amount AS color FROM nyc_taxi WHERE (ST_Within (ST_Point (dropoff_longitude, dropoff_latitude), ST_GeomFromText('POLYGON ((-74.03593615048472 40.69688991687815, -74.03593615048472 40.82319152940477, -73.8987365653707 40.82319152940477, -73.8987365653707 40.69688991687815, -74.03593615048472 40.69688991687815))'))) LIMIT 1000000",
+    "type": "weighted",
+    "params": {
+      "width": 938,
+      "height": 1139,
+      "weighted": {
+        "opacity": 0.5,
+        "bounding_box": [
+        -74.03593615048472,
+        40.69688991687815,
+        -73.8987365653707,
+        40.82319152940477
+        ],
+        "coordinate_system": "EPSG:4326",
+        "size_bound": [3],
+        "color_bound": [2.5, 200],
+        "color_gradient": ["#115f9a", "#d0f400"]
+      }
+    }
+  }
+}
